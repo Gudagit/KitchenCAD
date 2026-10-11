@@ -1,42 +1,44 @@
-# KuhinjaCAD
+# KitchenCAD
 
-Desktop program za Windows za projektovanje kuhinja: od mera prostorije do spiska delova, crteža i CNC programa. Napisan u C# (WinForms), bez spoljnih biblioteka, oko 15.000 linija koda.
+A Windows desktop application for designing kitchens: from room dimensions to part lists, shop drawings and CNC programs. Written in C# (WinForms) with no third-party libraries, about 15,000 lines of code.
 
-Ovde je prikaz projekta. **Izvorni kod je privatan; demo program i uvid u kod dostupni su na zahtev** (vidi ispod).
+This repository is a portfolio showcase. **The source code is private; a demo build and a code walkthrough are available on request** (see below).
 
-## Problem koji rešava
-U izradi kuhinje iste mere se prepisuju kroz više alata (crtež, lista za sečenje, bušenje, nalepnice), što izaziva greške. KuhinjaCAD drži jedan parametarski model: mera se unese jednom, a svi delovi, rupe za okov, crteži i programi se preračunaju.
+## The problem it solves
+Building a kitchen means re-typing the same dimensions into several tools (drawings, cut lists, drilling programs, labels), and every copy is a chance for a mistake. KitchenCAD keeps a single parametric model: enter a dimension once, and all parts, hardware holes, drawings and machine programs are recalculated from it.
 
-## Šta radi
-- Projektovanje po zidovima (L i U kuhinje), sa vratima i prozorima prostorije i upozorenjima o preklapanju
-- Donji, gornji, visoki elementi i fiokari; korpus, frontovi, okov i spojevi se računaju iz parametara
-- Slobodna podela unutrašnjosti, half-joint mreža, wine shelf, slepi ugao, zaobljeni krajevi
-- 3D prikaz, eksplodirani prikaz za sklapanje, realistični render (sopstveni path tracer)
-- Lista za sečenje, nesting, nalepnice za delove, shop crteži sa kotama
-- Izvoz: PDF, DXF (R12 i R2000), CNC programi
+## Features
+- Layout by wall (L-shaped and U-shaped kitchens) with doors and windows, plus warnings for overlaps and clearance problems
+- Base, wall and tall cabinets and drawer units; carcass, fronts, hardware and joinery are generated from parameters
+- Free interior division, half-joint grids, wine shelf, blind corner, rounded and chamfered ends
+- 3D view, exploded assembly view, and a photorealistic renderer (custom path tracer)
+- Cut lists, nesting, part labels, and dimensioned shop drawings
+- Export to PDF, DXF (R12 and R2000) and CNC programs
 
-## Slike
-![3D prikaz kuhinje](screenshots/01-3d-kuhinja.png)
-![Izgled zidova](screenshots/02-izgled-zidova.png)
-![Shop crtež](screenshots/03-shop-crtez.png)
-![Eksplodirani prikaz](screenshots/04-eksplodirani-prikaz.png)
-![Teksture](screenshots/05-teksture.png)
-![Crtež dela sa CNC obradom](screenshots/06-crtez-dela-cnc.png)
+## Screenshots
+The user interface is in Serbian.
 
-## Tehnologije
-C#, .NET Framework 4, WinForms, GDI+; sopstveni path tracer sa BVH strukturom, nesting algoritam, DXF i PDF izvoz, generisanje CNC programa preko šablona.
+![3D view of a kitchen](screenshots/01-3d-kuhinja.png)
+![Wall elevations with room warnings](screenshots/02-izgled-zidova.png)
+![Dimensioned shop drawing](screenshots/03-shop-crtez.png)
+![Exploded assembly view](screenshots/04-eksplodirani-prikaz.png)
+![Wood textures in 3D](screenshots/05-teksture.png)
+![Part drawing with CNC operations](screenshots/06-crtez-dela-cnc.png)
 
-## Kako je nastao
-Program sam razvila u saradnji sa AI asistentom (Claude Code). Ja sam odredila šta program radi, mere i pravila konstrukcije i proveravala rezultate; asistent je pisao kod po mojim zahtevima.
+## Technology
+C#, .NET Framework 4, WinForms, GDI+. A custom path tracer with a BVH acceleration structure, a nesting algorithm, DXF and PDF export, and template-based CNC program generation.
 
-## Demo i izvorni kod na zahtev
-Ako želite da isprobate program ili pogledate kod, javite se na **gudagluposti@gmail.com**. Demo šaljem kao ZIP, a pristup privatnom repozitorijumu dajem samo za čitanje.
+## How it was built
+I developed this program in collaboration with an AI assistant (Claude Code). I defined what the program does, the cabinet-making rules and dimensions, and tested and reviewed every result; the assistant wrote the code from my requirements.
 
-## Napomene
-- CNC izlaz nije proveren na pravoj mašini.
-- Nazivi proizvođača (Blum, Zebra, AutoCAD i dr.) pominju se samo da opišu kompatibilnost.
+## Demo and source code on request
+To try the program or review the code, contact me at **gudagluposti@gmail.com**. I send the demo as a ZIP file and grant read-only access to the private repository.
 
-## Licenca
-Sva prava zadržana. Slike i opis su objavljeni radi prikaza portfolija; kod i program se ne smeju kopirati, menjati ni koristiti bez dozvole. Vidi [LICENSE](LICENSE).
+## Notes
+- The CNC output has not been verified on a physical machine.
+- Manufacturer names (Blum, Zebra, AutoCAD and others) are mentioned only to describe compatibility; this project is not affiliated with them.
 
-Autor: Ivana
+## License
+All rights reserved. Text and images are published for portfolio viewing only; the software and its source code may not be copied, modified or used without permission. See [LICENSE](LICENSE).
+
+Author: Ivana
